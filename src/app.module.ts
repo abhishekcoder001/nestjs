@@ -19,17 +19,17 @@ import { RazorpayModule as paymentService} from './razorpay/razorpay.module';
     }),
 
     //  postgres
-    TypeOrmModule.forRoot({
-      type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username:  process.env.Postgres_Username ??'',
-      password: process.env.Postgres_Password ??'',
-      entities: [User],
-      database: 'postgres',
-      synchronize: true,
-    }),
-    UserModule,
+    // TypeOrmModule.forRoot({
+    //   type: 'postgres',
+    //   host: 'localhost',
+    //   port: 5432,
+    //   username:  process.env.Postgres_Username ??'',
+    //   password: process.env.Postgres_Password ??'',
+    //   entities: [User],
+    //   database: 'postgres',
+    //   synchronize: true,
+    // }),
+    // UserModule,
     // mongo db
     MongooseModule.forRoot(process.env.MONGODB_URL ?? ''),
     ProductsModule,
